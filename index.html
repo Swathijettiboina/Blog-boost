@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Blogs</title>
+</head>
+<body>
+    <header class="text-blue-800 text-center bg-gray-200 text-3xl italic bold h-10 w-full ">
+        <marquee>
+            <!-- Welcome to the BlogBoost -->
+        </marquee>
+    </header>
+    <main class="bg-red-100 h-auto left-[30px] right-[30px]">
+        <div class="container grid grid-cols-3 gap-2 justify-around align-items">
+            <div class=" flex rounded-[40px] shodow-lg hover:shadow-blue-400 p-30">
+                    <img src="./src/food-image.jpg" alt="food-image" width="500" class="rounded-xl"/>
+            </div>
+            <div class="flex-col">
+                <span class="text-3xl italic bold hover:shadow-blue-400" >Comfort Cravings</span>
+                <p id="decsription"></p>
+            </div>
+            <div>
+                <button type="submit">Edit</button>
+                <button type="submit">Delete</button>
+                <button type="submit">Read</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

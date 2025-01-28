@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" 
+    rel="stylesheet">
+    <title>Blogs</title>
+</head>
+<body>
+            <ul class="bg-blue-300  w-full h-[50px] flex">
+                <div class="text-5xl">Blog Boost</div>
+                <div class="flex gap-20">
+                    <li><a href="home.html">Home</a></li>
+                    <li><button type="button" onclick="openform()" 
+                        class="cursor-pointer"> Add Blog</button></li>
+                </div>
+            </ul>
+
+    <div id="myform"  style="display: none;">
+        <form onsubmit="addBlog(); return false;">
+            Blog Title: <input type="text" id="blog_name" placeholder="Enter Blog Title"><br>
+            Blog description : <input type="text" id="blog_description" placeholder="Enter the decsription" required><br>
+            <!-- Upload Image : <input type="file" accept="image/*" value="Choose File" id="uploaded_image"><br> -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <main>
+        <h3 class="justify-center">Blogs will display Here</h3>
+        <div id="blog_display"></div>
+    </main>
+    
+    <script>
+        var count=parseInt(localStorage.getItem(blog_count))||0;
+
+        function openform(){
+            document.getElementById("myform").style.display='block'
+        }
+
+        function addBlog(){
+            count+=1;
+            var name="Blog"+count;
+            var title=document.getElementById("blog_name").value;
+            var des=document.getElementById("blog_description").value;
+
+            localStorage.setItem(name+"_title", title);
+            localStorage.setItem(name+"_decription",des);
+            localStorage.setItem(blog_count,count);
+
+        // displaying the blog
+            displying_blog();
+       }   
+        function display_blog(){
+            display_blog=document.getElementById("blog_display");
+            display_blog.appendChild()
+            // localStorage.getItem({$count}+"_title")+localStorage.getItem({$count}+"_decription");
+        
+        }
+        window.onload = function() {
+        display_blog();
+    }
+    </script>
+</body>
+</html>
