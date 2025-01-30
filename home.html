@@ -1,153 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Blogs</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous">
+        <title>Blogs</title>
+    </head>
 
-<body>
-    <!-- header section with naviagtion bar -->
-    <header class="flex bg-blue-300 justify-between w-full">
-        <div class=" flex items-center text-5xl italic block drop-shadow-xg"
-            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-            <img src="./src/logo-blog-boost.webp" class="rounded-[30px]" alt="logo" height="80px" width="80px">
-            Blog Boost
-        </div>
-        <ul class="flex justify-end justify-between items-center ">
-            <div class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1  cursor-pointer">
-                <svg id='Home_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
-                    xmlns:xlink='http://www.w3.org/1999/xlink'>
-                    <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
-                    <g transform="matrix(0.91 0 0 0.91 12 12)">
-                        <path
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                            transform=" translate(-12, -11.55)"
-                            d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 15 L 14 15 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z"
-                            stroke-linecap="round" />
-                    </g>
-                </svg>
-                <a href="#" class="text-black">Home</a>
+    <body>
+        <!-- header section with naviagtion bar -->
+        <header class="flex bg-blue-300 justify-between w-full">
+            <div class=" flex items-center text-5xl italic block drop-shadow-xg"
+                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                <img src="./src/logo-blog-boost.webp" class="rounded-[30px]"
+                    alt="logo" height="80px" width="80px">
+                Blog Boost
             </div>
-            <div>
-                <li class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1 cursor-pointer">
-                    <svg id='Plus_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
+            <ul class="flex justify-end justify-between items-center ">
+                <div
+                    class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1  cursor-pointer">
+                    <svg id='Home_24' width='24' height='24' viewBox='0 0 24 24'
+                        xmlns='http://www.w3.org/2000/svg'
                         xmlns:xlink='http://www.w3.org/1999/xlink'>
-                        <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
-                        <g transform="matrix(1 0 0 1 12 12)">
+                        <rect width='24' height='24' stroke='none'
+                            fill='#000000' opacity='0' />
+                        <g transform="matrix(0.91 0 0 0.91 12 12)">
                             <path
                                 style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                                transform=" translate(-12, -12)"
-                                d="M 12 2 C 6.477 2 2 6.477 2 12 C 2 17.523 6.477 22 12 22 C 17.523 22 22 17.523 22 12 C 22 6.477 17.523 2 12 2 z M 16 13 L 13 13 L 13 16 C 13 16.552 12.552 17 12 17 L 12 17 C 11.448 17 11 16.552 11 16 L 11 13 L 8 13 C 7.448 13 7 12.552 7 12 L 7 12 C 7 11.448 7.448 11 8 11 L 11 11 L 11 8 C 11 7.448 11.448 7 12 7 L 12 7 C 12.552 7 13 7.448 13 8 L 13 11 L 16 11 C 16.552 11 17 11.448 17 12 L 17 12 C 17 12.552 16.552 13 16 13 z"
+                                transform=" translate(-12, -11.55)"
+                                d="M 12 2.0996094 L 1 12 L 4 12 L 4 21 L 10 21 L 10 15 L 14 15 L 14 21 L 20 21 L 20 12 L 23 12 L 12 2.0996094 z"
                                 stroke-linecap="round" />
                         </g>
                     </svg>
-                    <button type="button" onclick="openform()" class="text-black"> Add Blog</button>
-                </li>
-            </div>
-            <div class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1  cursor-pointer">
-                <svg id='About_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
-                    xmlns:xlink='http://www.w3.org/1999/xlink'>
-                    <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
-                    <g transform="matrix(1 0 0 1 12 12)">
-                        <path
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                            transform=" translate(-12, -13)"
-                            d="M 20 3 L 4 3 C 2.9 3 2.01 3.9 2.01 5 L 2 23 L 6 19 L 20 19 C 21.1 19 22 18.1 22 17 L 22 5 C 22 3.9 21.1 3 20 3 z M 11 7 L 13 7 L 13 9 L 11 9 L 11 7 z M 11 11 L 13 11 L 13 15 L 11 15 L 11 11 z"
-                            stroke-linecap="round" />
-                    </g>
-                </svg>
-                <a href="#" class="text-black">About</a>
-            </div>
-            <div class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1 cursor-pointer">
-                <svg id='Contact_Us_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
-                    xmlns:xlink='http://www.w3.org/1999/xlink'>
-                    <rect width='24' height='24' stroke='none' fill='#000000' opacity='0' />
-                    <g transform="matrix(0.91 0 0 0.91 12 12)">
-                        <path
-                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
-                            transform=" translate(-12, -12)"
-                            d="M 3 3 C 1.897 3 1 3.897 1 5 L 1 21 L 2 21 L 11 21 L 11 19.384766 C 11 17.496766 12.141266 15.895406 13.947266 14.941406 C 13.355266 14.119406 13 13.112 13 12 C 13 10.37 13.792 8.9354375 15 8.0234375 L 15 5 C 15 3.897 14.103 3 13 3 L 3 3 z M 5 7 L 7 7 L 7 9 L 5 9 L 5 7 z M 9 7 L 11 7 L 11 9 L 9 9 L 9 7 z M 18 9 C 16.34314575050762 9 15 10.34314575050762 15 12 C 15 13.65685424949238 16.34314575050762 15 18 15 C 19.65685424949238 15 21 13.65685424949238 21 12 C 21 10.34314575050762 19.65685424949238 9 18 9 z M 5 11 L 7 11 L 7 13 L 5 13 L 5 11 z M 9 11 L 11 11 L 11 13 L 9 13 L 9 11 z M 5 15 L 7 15 L 7 17 L 5 17 L 5 15 z M 9 15 L 11 15 L 11 17 L 9 17 L 9 15 z M 18 16 C 15.149 16 13 17.455766 13 19.384766 L 13 21 L 23 21 L 23 19.384766 C 23 17.455766 20.851 16 18 16 z"
-                            stroke-linecap="round" />
-                    </g>
-                </svg>
-                <a href="#" class="text-black">Contact</a>
-            </div>
+                    <a href="#" class="text-black">Home</a>
+                </div>
+                <div>
+                    <li
+                        class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1 cursor-pointer">
+                        <svg id='Plus_24' width='24' height='24'
+                            viewBox='0 0 24 24'
+                            xmlns='http://www.w3.org/2000/svg'
+                            xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <rect width='24' height='24' stroke='none'
+                                fill='#000000' opacity='0' />
+                            <g transform="matrix(1 0 0 1 12 12)">
+                                <path
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                    transform=" translate(-12, -12)"
+                                    d="M 12 2 C 6.477 2 2 6.477 2 12 C 2 17.523 6.477 22 12 22 C 17.523 22 22 17.523 22 12 C 22 6.477 17.523 2 12 2 z M 16 13 L 13 13 L 13 16 C 13 16.552 12.552 17 12 17 L 12 17 C 11.448 17 11 16.552 11 16 L 11 13 L 8 13 C 7.448 13 7 12.552 7 12 L 7 12 C 7 11.448 7.448 11 8 11 L 11 11 L 11 8 C 11 7.448 11.448 7 12 7 L 12 7 C 12.552 7 13 7.448 13 8 L 13 11 L 16 11 C 16.552 11 17 11.448 17 12 L 17 12 C 17 12.552 16.552 13 16 13 z"
+                                    stroke-linecap="round" />
+                            </g>
+                        </svg>
+                        <button type="button" onclick="openform()"
+                            class="text-black"> Add Blog</button>
+                    </li>
+                </div>
+                <div
+                    class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1  cursor-pointer">
+                    <svg id='About_24' width='24' height='24'
+                        viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
+                        xmlns:xlink='http://www.w3.org/1999/xlink'>
+                        <rect width='24' height='24' stroke='none'
+                            fill='#000000' opacity='0' />
+                        <g transform="matrix(1 0 0 1 12 12)">
+                            <path
+                                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                transform=" translate(-12, -13)"
+                                d="M 20 3 L 4 3 C 2.9 3 2.01 3.9 2.01 5 L 2 23 L 6 19 L 20 19 C 21.1 19 22 18.1 22 17 L 22 5 C 22 3.9 21.1 3 20 3 z M 11 7 L 13 7 L 13 9 L 11 9 L 11 7 z M 11 11 L 13 11 L 13 15 L 11 15 L 11 11 z"
+                                stroke-linecap="round" />
+                        </g>
+                    </svg>
+                    <a href="#" class="text-black">About</a>
+                </div>
+                <div
+                    class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1 cursor-pointer">
+                    <svg id='Contact_Us_24' width='24' height='24'
+                        viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
+                        xmlns:xlink='http://www.w3.org/1999/xlink'>
+                        <rect width='24' height='24' stroke='none'
+                            fill='#000000' opacity='0' />
+                        <g transform="matrix(0.91 0 0 0.91 12 12)">
+                            <path
+                                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"
+                                transform=" translate(-12, -12)"
+                                d="M 3 3 C 1.897 3 1 3.897 1 5 L 1 21 L 2 21 L 11 21 L 11 19.384766 C 11 17.496766 12.141266 15.895406 13.947266 14.941406 C 13.355266 14.119406 13 13.112 13 12 C 13 10.37 13.792 8.9354375 15 8.0234375 L 15 5 C 15 3.897 14.103 3 13 3 L 3 3 z M 5 7 L 7 7 L 7 9 L 5 9 L 5 7 z M 9 7 L 11 7 L 11 9 L 9 9 L 9 7 z M 18 9 C 16.34314575050762 9 15 10.34314575050762 15 12 C 15 13.65685424949238 16.34314575050762 15 18 15 C 19.65685424949238 15 21 13.65685424949238 21 12 C 21 10.34314575050762 19.65685424949238 9 18 9 z M 5 11 L 7 11 L 7 13 L 5 13 L 5 11 z M 9 11 L 11 11 L 11 13 L 9 13 L 9 11 z M 5 15 L 7 15 L 7 17 L 5 17 L 5 15 z M 9 15 L 11 15 L 11 17 L 9 17 L 9 15 z M 18 16 C 15.149 16 13 17.455766 13 19.384766 L 13 21 L 23 21 L 23 19.384766 C 23 17.455766 20.851 16 18 16 z"
+                                stroke-linecap="round" />
+                        </g>
+                    </svg>
+                    <a href="#" class="text-black">Contact</a>
+                </div>
 
-        </ul>
-    </header>
+            </ul>
+        </header>
 
-    <div id="myform" class="flex items-center justify-center z-50" style="display: none;">
-        <form onsubmit="addBlog(); return false" method="post"
-            class="bg-blue-300 text-center p-6 rounded-lg shadow-lg w-96">
-            <label for="blog_title" class="block font-bold text-xl mb-2">Blog Title</label>
-            <input type="text" id="blog_title" name="blog_title" placeholder="Enter Blog Title" required
-                class="w-full border border-gray-400 p-2 rounded mb-4">
+        <div id="myform" class="flex flex-col items-center justify-center z-50"
+            style="display: none;">
+            <form method="post"
+                class="bg-blue-300 text-center p-6 rounded-lg shadow-lg w-96">
+                <label for="blog_title"
+                    class="block font-bold text-xl mb-2">Blog Title</label>
+                <input type="text" id="blog_title" name="blog_title"
+                    placeholder="Enter Blog Title" required
+                    class="w-full border border-gray-400 p-2 rounded mb-4">
 
-            <label for="blog_description" class="block font-bold text-xl mb-2">Blog Description</label>
-            <textarea id="blog_description" name="blog_description" placeholder="Enter Blog Description" rows="6"
-                class="w-full border border-gray-400 p-2 rounded mb-4 placeholder-gray-500">
-            </textarea>
+                <label for="blog_description"
+                    class="block font-bold text-xl mb-2">Blog
+                    Description</label>
+                <textarea id="blog_description" name="blog_description" 
+                    placeholder="Enter Blog Description" rows="6" cols="6"
+                    class="w-full border border-gray-400 p-2 rounded mb-4 placeholder-gray-500">
+                </textarea>
 
-            <!-- <label for="blog_photo" class="block font-bold text-xl mb-2">Blog Photo</label>
-            <input type="file" accept="image/*" id="blog_photo" name="blog_photo" required
-                class="w-full border border-gray-400 p-2 rounded mb-4"> -->
+                <label for="blog_image"
+                    class="block font-bold text-xl mb-2">Blog Image</label>
+                <input type="text" id="blog_image" name="blog_image"
+                    placeholder="Enter image url for blog" required
+                    class="w-full border border-gray-400 p-2 rounded mb-4">
+                
+                <button type="button" id="blog_submit_btn" onclick="addBlog()"
+                    class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+                    Submit
+                </button>
+            </form>
+        </div>
 
-            <button type="submit" id="blog_submit_btn" onclick="closeform()"
-                class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
-                Submit
-            </button>
-        </form>
-    </div>
+        <main>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 "
+                id="blog_display"></div>
+        </main>
 
-
-    <main>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  " id="blog_display"></div>
-    </main>
-
-    <script>
+        <script>
         var count = parseInt(localStorage.getItem("blog_count")) || 0;
 
         function openform() {
+            // document.getElementById("blog_title").value="";
+            // document.getElementById("blog_description").value="";
             document.getElementById("myform").style.display = 'block'
         }
         function closeform() {
+            document.getElementById("blog_title").value="";
+            document.getElementById("blog_description").value="";
             document.getElementById("myform").style.display = 'none'
         }
 
         function addBlog() {
-            count += 1;
-            localStorage.setItem("blog_count", count);
             var title = document.getElementById("blog_title").value;
             var des = document.getElementById("blog_description").value;
+            
+            count += 1;
+            localStorage.setItem("blog_count", count);
+            
             let blog = {
                 "Id": Date.now(),
                 "Title": title,
                 "Description": des,
-                "Read_count":0
+                // "Read_count":0
             };
+            localStorage.setItem("Read_count"+blog.Id,0);
             var blogs = JSON.parse(localStorage.getItem("blogs")) || [];
             blogs.push(blog);
+            
             localStorage.setItem("blogs", JSON.stringify(blogs));
-            display_blog();
-            closeform();  // Close the form after adding the blog
+            display_blogs();
+            closeform();
         }
 
-        function display_blog() {
+        function display_blogs() {
             display_blog = document.getElementById("blog_display");
             display_blog.innerHTML = "";
             let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
             blogs.forEach((blog, index) => {
+                let viewCount = localStorage.getItem("Read_count" + blog.Id);
                 var newDiv = document.createElement("div");
-                newDiv.className = "text-center rounded overflow-hidden shadow-lg bg-white m-5 p-5 hover:shadow-lg hover:bg-blue-300";
+                newDiv.className = "text-center rounded overflow-hidden shadow-lg bg-white m-1 p-5 hover:shadow-lg hover:bg-blue-300";
                 newDiv.innerHTML = `
                 <h2 class="text-xl rounded-lg w-auto bold shadow-lg text-black bg-blue-100">${blog.Title} </h2>
                 <p class="text-black bg-blue-50">${blog.Description}</p>
+                
+                
                 <div class="flex justify-between items-center gap-2 rounded-[20px] px-1 py-1">
                     <div >
                     <svg id='Eye_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
@@ -155,40 +192,57 @@
                         <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12, -12)" d="M 12 4 C 4 4 1 12 1 12 C 1 12 4 20 12 20 C 20 20 23 12 23 12 C 23 12 20 4 12 4 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 C 10.34314575050762 9 9 10.34314575050762 9 12 C 9 13.65685424949238 10.34314575050762 15 12 15 C 13.65685424949238 15 15 13.65685424949238 15 12 C 15 10.34314575050762 13.65685424949238 9 12 9 z" stroke-linecap="round" />
                         </g>
                         </svg>
-                    <span id="read_count_${blog.Id}">${blog.Read_count}</span>
+                   <span id="read_count_${blog.Id}">${viewCount}</span>
+
                 </div>
-                <button type="button" onclick="count_increase(${blog.Id})"class="bg-gray-200 rounded-lg px-3 py-2 hover:underline">Read</button>
-                <button type="button" class="bg-gray-200 rounded-lg px-3 py-2 hover:underline">Edit</button>
+                
+                
+               <button type="button" onclick="read_blog(${blog.Id},'read_count_${blog.Id}')" class="bg-gray-200 rounded-lg px-3 py-2 hover:underline">
+                    Read</button>
+                <button type="button" onclick="editBlog(${blog.Id})" class="bg-gray-200 rounded-lg px-3 py-2 hover:underline">Edit</button>
+                
                 <button type="button" onclick="deleteBlog(${blog.Id})" class="flex bg-red-200 rounded-lg px-3 py-2 hover:underline">
                     Delete
                 <svg id='Delete_Bin_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
                         <g transform="matrix(1 0 0 1 12 12)" >
                         <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12, -12)" d="M 10 2 L 9 3 L 5 3 C 4.448 3 4 3.448 4 4 C 4 4.552 4.448 5 5 5 L 19 5 C 19.552 5 20 4.552 20 4 C 20 3.448 19.552 3 19 3 L 15 3 L 14 2 L 10 2 z M 5 7 L 5 20 C 5 21.1 5.9 22 7 22 L 17 22 C 18.1 22 19 21.1 19 20 L 19 7 L 5 7 z M 9.4101562 10.414062 C 9.6654063 10.414062 9.9207344 10.510578 10.115234 10.705078 L 12 12.589844 L 13.884766 10.705078 C 14.273766 10.316078 14.905922 10.316078 15.294922 10.705078 C 15.683922 11.094078 15.683922 11.726234 15.294922 12.115234 L 13.410156 14 L 15.294922 15.884766 C 15.683922 16.273766 15.683922 16.905922 15.294922 17.294922 C 14.905922 17.683922 14.273766 17.683922 13.884766 17.294922 L 12 15.410156 L 10.115234 17.294922 C 9.7262344 17.683922 9.0940781 17.683922 8.7050781 17.294922 C 8.3160781 16.905922 8.3160781 16.273766 8.7050781 15.884766 L 10.589844 14 L 8.7050781 12.115234 C 8.3160781 11.726234 8.3160781 11.094078 8.7050781 10.705078 C 8.8995781 10.510578 9.1549062 10.414062 9.4101562 10.414062 z" stroke-linecap="round" />
                         </g>
-                        </svg></button>
+                </svg></button>
             </div>`
-            // newDiv.querySelector('svg').addEventListener('click', function() {
-            //     blog.Read_count += 1;
-            //     localStorage.setItem("blogs", JSON.stringify(blogs));  // Save updated blogs to localStorage
-            //     document.getElementById(`read_count_${blog.Id}`).innerText = `${blog.Read_count} Reads`;  // Update read count display
-            // });
                 display_blog.appendChild(newDiv);
             });
         }
-        
-        function deleteBlog(blogId) {
-            let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
-
-            blogs = blogs.filter(blog => blog.Id !== blogId);
-
-            localStorage.setItem("blogs", JSON.stringify(blogs));
-
-            display_blog();
+        function editBlog(blogId){
+            window.location.href=`editBlog.html?blogId=${blogId}`;
         }
 
-        window.onload = display_blog;
+
+        function read_blog(blogId,view_span_id){
+            count_increase(blogId,view_span_id)
+            window.location.href=`readingBlog.html?blogId=${blogId}`;
+        }
+
+        function count_increase(blogId,view_span_id){
+            let view_count=parseInt(localStorage.getItem("Read_count"+blogId));
+            localStorage.setItem("Read_count"+blogId,view_count+1);
+            console.log(view_count);
+            let span_area=document.getElementById(view_span_id);
+            span_area.innerHTML="";
+            span_area.innerHTML=parseInt(localStorage.getItem("Read_count"+blogId));
+        }
+        function deleteBlog(blogId) {
+            localStorage.removeItem('Read_count' + blogId);
+            let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+            blogs = blogs.filter(blog => blog.Id !== blogId);
+            localStorage.setItem("blogs", JSON.stringify(blogs));
+            localStorage.setItem("blog_count",parseInt(localStorage.getItem("blog_count"))-1);
+            display_blogs();
+        }
+        window.onload = display_blogs;
 
     </script>
-</body>
+    </body>
 
 </html>
+<!-- <button type="button" onclick="count_increase(${blog.Id},'read_count_${blog.Id}')"class="bg-gray-200 rounded-lg px-3 py-2 hover:underline">
+                    Read</button> -->
