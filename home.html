@@ -76,7 +76,7 @@
                                 stroke-linecap="round" />
                         </g>
                     </svg>
-                    <a href="#" class="text-black">About</a>
+                    <a href="#about" class="text-black">About</a>
                 </div>
                 <div
                     class="flex hover:bg-gray-100 hover:underline rounded-[20px] px-3 py-1 cursor-pointer">
@@ -93,13 +93,13 @@
                                 stroke-linecap="round" />
                         </g>
                     </svg>
-                    <a href="#" class="text-black">Contact</a>
+                    <a href="#contact" class="text-black">Contact Us</a>
                 </div>
 
             </ul>
         </header>
-
-        <div id="myform" class="flex flex-col items-center justify-center z-50"
+        <div class="flex h-full items-center justify-center">       
+        <div id="myform" class="flex flex-col items-center justify-center mt-3 z-50"
             style="display: none;">
             <form method="post"
                 class="bg-blue-300 text-center p-6 rounded-lg shadow-lg w-96">
@@ -117,11 +117,11 @@
                     class="w-full border border-gray-400 p-2 rounded mb-4 placeholder-gray-500">
                 </textarea>
 
-                <label for="blog_image"
+                <!-- <label for="blog_image"
                     class="block font-bold text-xl mb-2">Blog Image</label>
                 <input type="text" id="blog_image" name="blog_image"
                     placeholder="Enter image url for blog" required
-                    class="w-full border border-gray-400 p-2 rounded mb-4">
+                    class="w-full border border-gray-400 p-2 rounded mb-4"> -->
                 
                 <button type="button" id="blog_submit_btn" onclick="addBlog()"
                     class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
@@ -129,11 +129,53 @@
                 </button>
             </form>
         </div>
-
+    </div>
         <main>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-5 "
                 id="blog_display"></div>
         </main>
+
+        <footer  class="bg-dark text-white text-center py-3 mt-40">
+            <div>
+                <section id="contact" class="container my-5">
+                    <h2 class="text-center mb-4">Contact Us</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Get in Touch</h5>
+                            <p>If you have any questions or feedback, feel free to reach out to us.</p>
+                            <p><strong>Email:</strong> contact@blogboost.com</p>
+                            <p><strong>Phone:</strong> +123 456 7890</p>
+                            <p><strong>Address:</strong> 123 Blog Street, Web City, WC 56789</p>
+                        </div>
+                        <div class="col-md-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            <div id="about" class="container bg-gray-200 w-full">
+                <p class="text-black">&copy; 2025 BlogBoost. All rights reserved.</p>
+                <a href="#" class="text-black mx-2">Privacy Policy</a> | 
+                <a href="#" class="text-black mx-2">Terms of Service</a>
+            </div>
+                
+        </footer>
+        
 
         <script>
         var count = parseInt(localStorage.getItem("blog_count")) || 0;
