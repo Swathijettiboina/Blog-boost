@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous">
         <title>Blogs</title>
     </head>
@@ -112,16 +110,20 @@
                 <label for="blog_description"
                     class="block font-bold text-xl mb-2">Blog
                     Description</label>
-                <textarea id="blog_description" name="blog_description" 
-                    placeholder="Enter Blog Description" rows="6" cols="6"
+                <input id="blog_description" name="blog_description" 
+                    placeholder="Enter Blog Description" 
                     class="w-full border border-gray-400 p-2 rounded mb-4 placeholder-gray-500">
-                </textarea>
 
-                <!-- <label for="blog_image"
-                    class="block font-bold text-xl mb-2">Blog Image</label>
+                <label for="blog_image" class="block font-bold text-xl mb-2">Blog Image</label>
                 <input type="text" id="blog_image" name="blog_image"
                     placeholder="Enter image url for blog" required
-                    class="w-full border border-gray-400 p-2 rounded mb-4"> -->
+                    class="w-full border border-gray-400 p-2 rounded mb-4">
+
+                    <label for="blog_content"
+                    class="block font-bold text-xl mb-2">Blog Content</label>
+                <textarea type="text" id="blog_content" name="blog_content" rows="8" cols="6"
+                    placeholder="Enter blog content" required
+                    class="w-full border border-gray-400 p-2 rounded mb-4"></textarea>
                 
                 <button type="button" id="blog_submit_btn" onclick="addBlog()"
                     class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
@@ -194,7 +196,9 @@
         function addBlog() {
             var title = document.getElementById("blog_title").value;
             var des = document.getElementById("blog_description").value;
-            
+            var image=document.getElementById("blog_image").value;
+            var content=document.getElementById("blog_content").value;
+ 
             count += 1;
             localStorage.setItem("blog_count", count);
             
@@ -202,6 +206,8 @@
                 "Id": Date.now(),
                 "Title": title,
                 "Description": des,
+                "Image":image,
+                "Content":content
                 // "Read_count":0
             };
             localStorage.setItem("Read_count"+blog.Id,0);
@@ -223,9 +229,10 @@
                 var newDiv = document.createElement("div");
                 newDiv.className = "text-center rounded overflow-hidden shadow-lg bg-white m-1 p-5 hover:shadow-lg hover:bg-blue-300";
                 newDiv.innerHTML = `
-                <h2 class="text-xl rounded-lg w-auto bold shadow-lg text-black bg-blue-100">${blog.Title} </h2>
-                <p class="text-black bg-blue-50">${blog.Description}</p>
                 
+                <h2 class="text-xl rounded-lg w-auto bold shadow-lg text-black bg-blue-100">${blog.Title} </h2>
+                <img src="${blog.Image}" alt="blog image">
+                <p class="text-black bg-blue-50">${blog.Description}</p>
                 
                 <div class="flex justify-between items-center gap-2 rounded-[20px] px-1 py-1">
                     <div >

@@ -20,22 +20,23 @@
             <form method="post"  >
                 <!-- class="bg-blue-300 text-center p-6 rounded-lg shadow-lg w-96" -->
                 <!-- <span id="id_display"></span> -->
-                <label for="edit_title"
-                    class="block font-bold text-xl mb-2">Blog Title</label>
-                <input type="text" id="edit_title" name="edit_title"
-                    placeholder="Enter Blog Title" required
+                <label for="edit_title" class="block font-bold text-xl mb-2">Blog Title</label>
+                <input type="text" id="edit_title" name="edit_title"   placeholder="Enter Blog Title" required
                     class="w-full border border-gray-400 p-2 rounded mb-4">
 
-                <label for="edit_description"
-                    class="block font-bold text-xl mb-2">Blog
-                    Description</label>
-                <textarea id="edit_description" name="edit_description"
-                    placeholder="Enter Blog Description" rows="6" cols="6"
+                <label for="edit_description" class="block font-bold text-xl mb-2">Blog Description</label>
+                <input id="edit_description" name="edit_description"  placeholder="Enter Blog Description" 
                     class="w-full border border-gray-400 p-2 rounded mb-4 placeholder-gray-500">
-                </textarea>
 
-                <button type="button" id="blog_submit_btn" onclick="saveChanges()"
-                    class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+                <label for="edit_image" class="block font-bold text-xl mb-2">Blog Image</label>
+                <input type="text" id="edit_image" name="edit_image" placeholder="Enter image url for blog" required
+                    class="w-full border border-gray-400 p-2 rounded mb-4">
+
+                    <label for="edit_content"class="block font-bold text-xl mb-2">Blog Content</label>
+                <textarea type="text" id="edit_content" name="edit_content" rows="8" cols="6" placeholder="Enter blog content" required
+                    class="w-full border border-gray-400 p-2 rounded mb-4"></textarea>
+
+                <button type="button" id="blog_submit_btn" onclick="saveChanges()" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
                     Submit
                 </button>
 
@@ -50,8 +51,13 @@
             let blog=blogs.find(b=>b.Id===parseInt(blog_id));
             const title = blog.Title;
             const des = blog.Description;
+            const image=blog.Image;
+            const content=blog.Content;
+
             document.getElementById("edit_title").value=title;
             document.getElementById("edit_description").value=des;
+            document.getElementById("edit_image").value=image;
+            document.getElementById("edit_content").value=content;
             // document.getElementById("id_display").textContent=blog_id;
          }
          function saveChanges(){
@@ -59,22 +65,21 @@
             const blog_id=params.get("blogId")
             let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
             let blog=blogs.find(b=>b.Id===parseInt(blog_id));
+
             let newTitle=document.getElementById("edit_title").value;
             let newDescription=document.getElementById("edit_description").value;
+            let newImage=document.getElementById("edit_image").value;
+            let newContent=document.getElementById("edit_content").value;
 
             blog.Title = newTitle;
             blog.Description = newDescription;
+            blog.Image=newImage;
+            blog.Content=newContent;
 
-            // Save the updated blog list back to localStorage
             localStorage.setItem("blogs", JSON.stringify(blogs));
-
-            // Optionally, navigate back to the home page after saving changes
             window.location.href = "home.html";
 
          }
-        //  function gotoHome(){
-        //     window.location.href=`home.html`;
-        // }
     </script>
 </body>
 </html>
